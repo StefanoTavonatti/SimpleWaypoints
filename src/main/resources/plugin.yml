@@ -1,7 +1,7 @@
 name: SimpleWaypoints
 version: 0.1
 author: Stefano Tavonatti
-main: tavonatti.stefano.spigot_plugin.waypoints
+main: tavonatti.stefano.spigot_plugin.waypoints.Main
 commands:
   wsave:
     description: save a new waypoint
