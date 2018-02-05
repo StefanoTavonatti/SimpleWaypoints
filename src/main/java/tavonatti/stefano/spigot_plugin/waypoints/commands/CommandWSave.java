@@ -51,7 +51,7 @@ public class CommandWSave implements CommandExecutor {
         return true;
     }
 
-    public boolean loadWaypointFile(File waypointFile, Properties properties) {
+    public static boolean loadWaypointFile(File waypointFile, Properties properties) {
         if(!waypointFile.exists() || !waypointFile.isFile()){
             properties=new Properties();
         }
