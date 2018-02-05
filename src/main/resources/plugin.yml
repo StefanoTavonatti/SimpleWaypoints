@@ -1,0 +1,14 @@
+name: SimpleWaypoints
+version: 0.1
+author: Stefano Tavonatti
+main: tavonatti.stefano.spigot_plugin.waypoints
+commands:
+  wsave:
+    description: save a new waypoint
+    usage: /wsave
+  wtp:
+    description: teleport player to waypoint
+    usage: /wtp
+  wlist:
+    description: list waypoints
+    usage: /wlist
