@@ -1,6 +1,8 @@
 package tavonatti.stefano.spigot_plugin.waypoints.commands;
 
 import org.bukkit.Location;
+import org.bukkit.Particle;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -47,6 +49,8 @@ public class CommandWTP implements CommandExecutor {
             Location location=new Location(player.getWorld(),x,y,z);
 
             player.teleport(location);
+            player.spawnParticle(Particle.END_ROD,location,500);
+            player.playSound(location, Sound.ENTITY_ENDERMEN_TELEPORT,1,1);
 
         }
 
