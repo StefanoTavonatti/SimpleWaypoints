@@ -18,7 +18,7 @@ public class CommandWSave implements CommandExecutor {
             Player player= (Player) commandSender;
 
             if(strings.length<1){
-                player.chat("use /wsave <name>");
+                player.sendMessage("use /wsave <name>");
                 return true;
             }
 
@@ -45,7 +45,7 @@ public class CommandWSave implements CommandExecutor {
             }
 
 
-            player.chat("Waypoint saved");
+            player.sendMessage("Waypoint saved");
         }
 
         return true;

@@ -16,7 +16,7 @@ public class CommandWTP implements CommandExecutor {
             Player player = (Player) commandSender;
 
             if (strings.length < 1) {
-                player.chat("use /wtp <name>");
+                player.sendMessage("use /wtp <name>");
                 return true;
             }
 
@@ -32,7 +32,7 @@ public class CommandWTP implements CommandExecutor {
             if (CommandWSave.loadWaypointFile(waypointFile, properties)) return true;
 
             if(properties.getProperty(strings[0])==null){
-                player.chat("Waypoint do not exists");
+                player.sendMessage("Waypoint do not exists");
                 return true;
             }
 

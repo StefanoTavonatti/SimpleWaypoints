@@ -33,7 +33,7 @@ public class CommandWList implements CommandExecutor{
                 String temp=it.next().toString();
                 message+=""+ ChatColor.BLUE+temp+" "+ChatColor.WHITE+properties.getProperty(temp)+"\n";
             }
-            player.chat(message);
+            player.sendMessage(message);
         }
 
         return true;
