@@ -18,4 +18,4 @@ cd SimpleWaypoints
 mvn clean package
 ```
 
-or download an already compiled version: [https://github.com/StefanoTavonatti/SimpleWaypoints.git](https://github.com/StefanoTavonatti/SimpleWaypoints.git "")
+or download an already compiled version: [https://github.com/StefanoTavonatti/SimpleWaypoints/releases](https://github.com/StefanoTavonatti/SimpleWaypoints/releases "")
