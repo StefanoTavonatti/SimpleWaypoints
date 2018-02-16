@@ -1,5 +1,5 @@
 name: SimpleWaypoints
-version: 0.1
+version: 0.2
 author: Stefano Tavonatti
 main: tavonatti.stefano.spigot_plugin.waypoints.Main
 commands:
@@ -12,3 +12,6 @@ commands:
   wlist:
     description: list waypoints
     usage: /wlist
+  wdelete:
+    description: delete a waypoint
+    usage: /wdelete
