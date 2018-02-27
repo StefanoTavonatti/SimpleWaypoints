@@ -10,6 +10,10 @@ A [Spigot](https://www.spigotmc.org/ "") plugin which allows the players to set 
 - **/wlist** shows the of list all waypoints.
 - **/wdelete \<waypoint name\>** delete a waypoint.
 
+## Permissions:
+
+- **simplewaypoints.waypoints**: Allow the user to use the personal waypoints.
+
 ## Build the plugin
 
 To build the plugin, type the following commands:

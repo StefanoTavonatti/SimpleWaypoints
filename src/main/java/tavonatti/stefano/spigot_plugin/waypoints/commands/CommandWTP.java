@@ -1,5 +1,6 @@
 package tavonatti.stefano.spigot_plugin.waypoints.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -7,6 +8,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import tavonatti.stefano.spigot_plugin.waypoints.utils.Permissions;
 
 import java.io.File;
 import java.util.Properties;
@@ -16,6 +18,11 @@ public class CommandWTP implements CommandExecutor {
 
         if(commandSender instanceof Player) {
             Player player = (Player) commandSender;
+
+            if(!player.hasPermission(Permissions.WAYPOINTS.permission)){
+                player.sendMessage(""+ ChatColor.RED+"You don't have the permission to do this!!!");
+                return true;
+            }
 
             if (strings.length < 1) {
                 player.sendMessage("use /wtp <name>");

@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import tavonatti.stefano.spigot_plugin.waypoints.utils.Permissions;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -16,6 +17,11 @@ public class CommandWDelete implements CommandExecutor{
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(commandSender instanceof Player){
             Player player= (Player) commandSender;
+
+            if(!player.hasPermission(Permissions.WAYPOINTS.permission)){
+                player.sendMessage(""+ ChatColor.RED+"You don't have the permission to do this!!!");
+                return true;
+            }
 
             if(strings.length<1){
                 player.sendMessage("use /wdelete <name>");
