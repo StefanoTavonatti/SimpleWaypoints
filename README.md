@@ -8,6 +8,7 @@ A [Spigot](https://www.spigotmc.org/ "") plugin which allows the players to set 
 - **/wsave \<waypoint name\>** saves a new waypoint.
 - **/wtp \<waypoint name\>** teleports to a waypoint.
 - **/wlist** shows the of list all waypoints.
+- **/wdelete \<waypoint name\>** delete a waypoint.
 
 ## Build the plugin
 
@@ -19,3 +20,7 @@ mvn clean package
 ```
 
 or download an already compiled version: [https://github.com/StefanoTavonatti/SimpleWaypoints/releases](https://github.com/StefanoTavonatti/SimpleWaypoints/releases "")
+
+## External links
+
+- checkout the waypont plugin also in its Spigot page: [Simple Waypoints](https://www.spigotmc.org/resources/simple-waypoints.52934/ "")
