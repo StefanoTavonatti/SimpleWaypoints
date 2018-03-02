@@ -1,6 +1,7 @@
 package tavonatti.stefano.spigot_plugin.waypoints.commands;
 
 import org.bukkit.ChatColor;
+import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -35,9 +36,17 @@ public class CommandWList implements CommandExecutor{
             Iterator it=properties.keySet().iterator();
             String message="Waypoints:\n";
 
+            ChatColor chatColor=ChatColor.BLUE;
+
+            if(player.getWorld().getEnvironment()== World.Environment.NETHER){
+                chatColor=ChatColor.RED;
+            }else if(player.getWorld().getEnvironment()== World.Environment.THE_END){
+                chatColor=ChatColor.AQUA;
+            }
+
             while (it.hasNext()){
                 String temp=it.next().toString();
-                message+=""+ ChatColor.BLUE+temp+" "+ChatColor.WHITE+properties.getProperty(temp)+"\n";
+                message+=""+ chatColor+temp+" "+ChatColor.WHITE+properties.getProperty(temp)+"\n";
             }
             player.sendMessage(message);
         }
