@@ -74,7 +74,7 @@ public class CommandWTP implements CommandExecutor {
                 player.teleport(location);
             }
             player.spawnParticle(Particle.END_ROD,location,500);
-            player.playSound(location, Sound.ENTITY_ENDERMEN_TELEPORT,1,1);
+            player.playSound(location, Sound.ENTITY_ENDERMAN_TELEPORT,1,1);
 
         }
 
