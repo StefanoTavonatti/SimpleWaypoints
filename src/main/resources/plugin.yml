@@ -1,5 +1,5 @@
 name: SimpleWaypoints
-version: 0.2
+version: 0.3
 author: Stefano Tavonatti
 main: tavonatti.stefano.spigot_plugin.waypoints.Main
 commands:
