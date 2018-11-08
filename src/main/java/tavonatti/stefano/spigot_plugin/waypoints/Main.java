@@ -1,10 +1,7 @@
 package tavonatti.stefano.spigot_plugin.waypoints;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import tavonatti.stefano.spigot_plugin.waypoints.commands.CommandWDelete;
-import tavonatti.stefano.spigot_plugin.waypoints.commands.CommandWList;
-import tavonatti.stefano.spigot_plugin.waypoints.commands.CommandWSave;
-import tavonatti.stefano.spigot_plugin.waypoints.commands.CommandWTP;
+import tavonatti.stefano.spigot_plugin.waypoints.commands.*;
 
 import java.io.File;
 
@@ -20,6 +17,7 @@ public class Main extends JavaPlugin{
         this.getCommand("wtp").setExecutor(new CommandWTP());
         this.getCommand("wlist").setExecutor(new CommandWList());
         this.getCommand("wdelete").setExecutor(new CommandWDelete());
+        this.getCommand("whome").setExecutor(new CommandWHome());
 
     }
 

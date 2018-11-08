@@ -10,6 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import tavonatti.stefano.spigot_plugin.waypoints.utils.Permissions;
+import tavonatti.stefano.spigot_plugin.waypoints.utils.TPUtils;
 
 import java.io.File;
 import java.util.Properties;
@@ -56,25 +57,7 @@ public class CommandWTP implements CommandExecutor {
 
             Location location=new Location(player.getWorld(),x,y,z);
 
-            if(player.isInsideVehicle()){
-                /*if the player is inside a veichle, move the veichle*/
-                Entity veichle=player.getVehicle();
-                location=new Location(player.getWorld(),x,y+1,z);
-
-                veichle.eject();//eject the player from the veichle
-
-                //teleport the player and the veichle
-                veichle.teleport(location);
-                player.teleport(location);
-
-                //put the player on the veichle
-                veichle.addPassenger(player);
-            }
-            else {
-                player.teleport(location);
-            }
-            player.spawnParticle(Particle.END_ROD,location,500);
-            player.playSound(location, Sound.ENTITY_ENDERMAN_TELEPORT,1,1);
+            TPUtils.teleportPlayer(player,location);
 
         }
 

@@ -15,3 +15,6 @@ commands:
   wdelete:
     description: delete a waypoint
     usage: /wdelete
+  whome:
+    description: teleport to spawn location
+    usage: /whome
