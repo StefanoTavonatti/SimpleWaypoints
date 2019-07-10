@@ -15,6 +15,7 @@ public class Main extends JavaPlugin{
 
         this.getCommand("wsave").setExecutor(new CommandWSave());
         this.getCommand("wtp").setExecutor(new CommandWTP());
+        this.getCommand("wtp").setTabCompleter(new CommandCompleter()); //registering tab completer
         this.getCommand("wlist").setExecutor(new CommandWList());
         this.getCommand("wdelete").setExecutor(new CommandWDelete());
         this.getCommand("whome").setExecutor(new CommandWHome());
