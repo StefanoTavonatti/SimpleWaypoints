@@ -15,14 +15,11 @@ public class CommandCompleter implements TabCompleter
 {
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings)
     {
-        if(commandSender instanceof Player)
-        {
-            Player player = (Player) commandSender;
+        if(commandSender instanceof Player){
+            Player p = (Player) commandSender;
 
             //load file
-            File waypointFile = new File("waypoints/" + player.getName() + "-" +
-                    player.getWorld().getName() + ".properties");
-
+            File waypointFile = new File("waypoints/" + p.getName() + "-" + p.getWorld().getName() + ".properties");
             Properties properties = new Properties();
             if (CommandWSave.loadWaypointFile(waypointFile, properties)) return null;
             Iterator it=properties.keySet().iterator();
