@@ -9,6 +9,7 @@ A [Spigot](https://www.spigotmc.org/ "") plugin which allows the players to set 
 - **/wtp \<waypoint name\>** teleports to a waypoint (permission required: **simplewaypoints.waypoints**).
 - **/wlist** shows the of list all waypoints (permission required: **simplewaypoints.waypoints**).
 - **/wdelete \<waypoint name\>** delete a waypoint.
+- **/whome** teleports player to his bed.
 
 ## Permissions:
 
