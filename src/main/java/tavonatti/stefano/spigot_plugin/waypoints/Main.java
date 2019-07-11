@@ -14,11 +14,16 @@ public class Main extends JavaPlugin{
         createWaypointsDir();
 
         this.getCommand("wsave").setExecutor(new CommandWSave());
-        this.getCommand("wtp").setExecutor(new CommandWTP());
-        this.getCommand("wlist").setExecutor(new CommandWList());
-        this.getCommand("wdelete").setExecutor(new CommandWDelete());
-        this.getCommand("whome").setExecutor(new CommandWHome());
 
+        this.getCommand("wtp").setExecutor(new CommandWTP());
+        this.getCommand("wtp").setTabCompleter(new CommandCompleter()); //registering tab completer for /wtp
+
+        this.getCommand("wlist").setExecutor(new CommandWList());
+
+        this.getCommand("wdelete").setExecutor(new CommandWDelete());
+        this.getCommand("wdelete").setTabCompleter(new CommandCompleter()); //registering tab completer for /wdelete
+
+        this.getCommand("whome").setExecutor(new CommandWHome());
     }
 
     private void createWaypointsDir() {

@@ -1,6 +1,7 @@
 name: SimpleWaypoints
-version: 0.3
-author: Stefano Tavonatti
+version: 0.3-tabbed
+api-version: 1.14
+author: Stefano Tavonatti; DKolibar
 main: tavonatti.stefano.spigot_plugin.waypoints.Main
 commands:
   wsave:
