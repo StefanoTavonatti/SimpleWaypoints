@@ -39,3 +39,7 @@ or download an already compiled version: [https://github.com/StefanoTavonatti/Si
 ## External links
 
 - checkout the waypont plugin also in its Spigot page: [Simple Waypoints](https://www.spigotmc.org/resources/simple-waypoints.52934/ "")
+
+## Contributions
+
+- Special thanks to [Daniel Kolibár](https://github.com/DKolibar) for the Tab completion feature.
