@@ -1,5 +1,8 @@
 package tavonatti.stefano.spigot_plugin.waypoints.commands;
 
+import com.google.common.base.Predicates;
+import com.google.common.collect.Collections2;
+import com.google.common.collect.Lists;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
@@ -29,8 +32,13 @@ public class CommandCompleter implements TabCompleter
             }
 
             //filtering result based on what player types
-            List<String> filteredList = new ArrayList<String>();
-            StringUtil.copyPartialMatches(strings[0], waypointList, filteredList);
+//            List<String> filteredList = new ArrayList<String>();
+
+            List<String> filteredList = Lists.newArrayList(Collections2.filter(
+                    waypointList, Predicates.containsPattern(strings[0])));
+
+//            StringUtil.copyPartialMatches(strings[0], waypointList, filteredList);
+
             Collections.sort(filteredList);
 
             return filteredList;
