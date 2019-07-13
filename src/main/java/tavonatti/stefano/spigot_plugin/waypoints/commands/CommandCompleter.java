@@ -4,12 +4,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
+import org.bukkit.util.StringUtil;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 public class CommandCompleter implements TabCompleter
 {
@@ -30,7 +28,12 @@ public class CommandCompleter implements TabCompleter
                 waypointList.add(it.next().toString());
             }
 
-            return waypointList;
+            //filtering result based on what player types
+            List<String> filteredList = new ArrayList<String>();
+            StringUtil.copyPartialMatches(strings[0], waypointList, filteredList);
+            Collections.sort(filteredList);
+
+            return filteredList;
         }
 
         return null;
