@@ -30,14 +30,9 @@ public class CommandCompleter implements TabCompleter
                 waypointList.add(it.next().toString());
             }
 
-            //filtering result based on what player types
-//            List<String> filteredList = new ArrayList<String>();
-
+            //filter list
             List<String> filteredList = Lists.newArrayList(Collections2.filter(
                     waypointList, Predicates.containsPattern(strings[0])));
-
-//            StringUtil.copyPartialMatches(strings[0], waypointList, filteredList);
-
             Collections.sort(filteredList);
 
             return filteredList;
