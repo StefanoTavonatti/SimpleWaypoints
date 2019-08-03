@@ -1,15 +1,15 @@
 package tavonatti.stefano.spigot_plugin.waypoints.commands;
 
+import com.google.common.base.Predicates;
+import com.google.common.collect.Collections2;
+import com.google.common.collect.Lists;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 public class CommandCompleter implements TabCompleter
 {
@@ -30,7 +30,12 @@ public class CommandCompleter implements TabCompleter
                 waypointList.add(it.next().toString());
             }
 
-            return waypointList;
+            //filter list
+            List<String> filteredList = Lists.newArrayList(Collections2.filter(
+                    waypointList, Predicates.containsPattern(strings[0])));
+            Collections.sort(filteredList);
+
+            return filteredList;
         }
 
         return null;
